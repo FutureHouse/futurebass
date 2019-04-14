@@ -10,7 +10,7 @@ public class TwoSum {
 		int[] nums = {2,1,11,7};
 		int	target = 9;
 		TwoSum twosum = new TwoSum();
-		TwoSum.Solution solution = twosum.new Solution();
+		Solution solution = twosum.new Solution();
 		int[] result = solution.twoSum_1(nums, target);
 		System.out.println(Arrays.toString(result));
 		result = solution.twoSum_2(nums, target);
@@ -19,6 +19,9 @@ public class TwoSum {
 	class Solution{
 		public int[] twoSum_1(int[] nums, int target) {
 			//runtime 21ms, 38.5MB memory used
+			/**
+			 * Just the brute force approach.
+			 */
 			int[] result = new int[2];
 			for(int i = 0; i < nums.length; i++) {
 				for(int j = i + 1; j < nums.length; j++) {
@@ -34,6 +37,9 @@ public class TwoSum {
 		
 		public int[] twoSum_2(int[] nums, int target) {
 			//runtime 2ms, 39.3MB memory used
+			/**
+			 * Use a HashMap
+			 */
 			Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 			for(int i = 0; i < nums.length; i++ ){
 				int complement = target -nums[i];
