@@ -15,6 +15,7 @@ public class Reverse_Integer {
 
 	}
 	 public int reverse_1(int x) {
+		 
 	        int result = 0,i = 0;
 	        int xl = x;
 	        while(xl != 0) {
