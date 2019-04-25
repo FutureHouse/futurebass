@@ -1,4 +1,4 @@
-package eemoveduplicates;
+package removeduplicates;
 
 public class Remove_Duplicates {
 	public class ListNode {
