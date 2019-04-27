@@ -8,8 +8,6 @@ public class Container_With_Most_Water {
 	}
 
 	public static int maxArea(int[] height) {
-		if (height == null)
-			return 0;
 		int left = 0, right = height.length - 1;
 		int result = 0;
 		while (left < right) {
