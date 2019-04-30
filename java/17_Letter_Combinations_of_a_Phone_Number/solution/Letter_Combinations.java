@@ -6,7 +6,7 @@ import java.util.List;
 public class Letter_Combinations {
 
 	public static void main(String[] args) {
-		String digits = "23";
+		String digits = "233";
 		System.out.println(letterCombinations(digits).toString());
 
 	}
