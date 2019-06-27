@@ -28,7 +28,6 @@ public class Remove_Duplicates_from_Sorted_Array_II {
 				index=0;
 			}
 		}
-		
         return nums.length -len-index;
     }
 }

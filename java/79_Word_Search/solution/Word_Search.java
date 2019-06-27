@@ -20,7 +20,7 @@ public class Word_Search {
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[i].length; j++) {
 				if (i == 0) {
-
+					
 				} else if (j == 0) {
 
 				} else {
