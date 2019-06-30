@@ -10,23 +10,15 @@ public class Symmetric_Tree {
 		}
 	}
 
-	public static void main(String[] args) {
-		Symmetric_Tree st = new Symmetric_Tree();
-		int[] nums = {1,2,2,3,4,4,3};
-		TreeNode tn = st.new TreeNode(nums[0]);
-		TreeNode p = tn;
-		
-		
+	public boolean isSymmetric(TreeNode root) {
+	    return isMirror(root, root);
 	}
 
-	public boolean isSymmetric(TreeNode root) {
-		TreeNode p = root;
-		if(p.left.left != p.right.right || p.left.right !=p.right.left) {
-			return false;
-		}
-		return isSymmetric(p.left)&&isSymmetric(p.right);
-	}
-	private boolean isSame(TreeNode root) {
-		
+	public boolean isMirror(TreeNode t1, TreeNode t2) {
+	    if (t1 == null && t2 == null) return true;
+	    if (t1 == null || t2 == null) return false;
+	    return (t1.val == t2.val)
+	        && isMirror(t1.right, t2.left)
+	        && isMirror(t1.left, t2.right);
 	}
 }
