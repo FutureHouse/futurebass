@@ -6,7 +6,5 @@ public class Convert_Sorted {
 		// TODO Auto-generated method stub
 
 	}
-	 public TreeNode sortedArrayToBST(int[] nums) {
-	        
-	 }
+	
 }
