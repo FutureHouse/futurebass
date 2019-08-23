@@ -30,6 +30,5 @@ public class Subsets_II {
 			while (i + 1 < nums.length && nums[i + 1] == nums[i])
 				i++;
 		}
-
 	}
 }
