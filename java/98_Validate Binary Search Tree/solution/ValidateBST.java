@@ -8,25 +8,27 @@ public class ValidateBST {
 	}
 
 	public static boolean isValidBST(TreeNode root) {
-		if (root == null)
-			return false;
-		return isValid(root);
+		return isValid(root, null, null);
 	}
 
-	public static boolean isValid(TreeNode root) {
-		if (root.left != null && root.right != null) {
-			boolean l = true, r = true;
-			if (root.val <= root.left.val)
-				return false;
-			l = isValid(root.left);
-			if (root.val >= root.right.val)
-				return false;
-			r = isValid(root.right);
-			return l && r;
-		} else if (root.left == null && root.right == null) {
+	public static boolean isValid(TreeNode root, TreeNode left, TreeNode right) {
+		if (root == null) {
 			return true;
+		}	
+		if (left != null && root.val <= left.val) {
+			return false;
 		}
-		return false;
+
+		if (right != null && root.val >= right.val) {
+			return false;
+		}
+		if (!isValid(root.right, root, right)) {
+			return false;
+		}
+		if (!isValid(root.left, left, root)) {
+			return false;
+		}
+		return true;
 	}
 }
 
