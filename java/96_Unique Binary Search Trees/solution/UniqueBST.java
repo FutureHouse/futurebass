@@ -3,7 +3,7 @@ package solution;
 public class UniqueBST {
 
 	public static void main(String[] args) {
-		System.out.println(numTrees(1));
+		System.out.println(numTrees(18));
 	}
 
 	public static int numTrees(int n) {
