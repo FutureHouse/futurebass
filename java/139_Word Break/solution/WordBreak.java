@@ -25,7 +25,6 @@ public class WordBreak {
 					break;
 				}
 			}
-
 		}
 		return f[s.length()];
 	}
